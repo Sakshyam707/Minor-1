@@ -1,0 +1,62 @@
+[
+  {
+    "image": "shop1.jpg",
+    "name": "Plain Tshirt",
+    "description": ".",
+    "price": "Rs. 1200"
+  },
+  {
+    "image": "shop2.jpg",
+    "name": "Printed Tshirt",
+    "description": ".",
+    "price": "Rs. 1000"
+  },
+  {
+    "image": "shop3.jpg",
+    "name": "Karma edition",
+    "description": "",
+    "price": "Rs. 1200"
+  },
+  {
+    "image":"shop4.jpg",
+    "name": "Couple edition",
+    "description": ".",
+    "price": "Rs. 2000"
+  },
+  {
+    "image": "shop5.jpg",
+    "name": "Shirts",
+    "description": "",
+    "price": "Rs. 1650"
+  },
+  {
+    "image": "shop6.jpg",
+    "name": "Bhety Special",
+    "description": "",
+    "price": "Rs. 1300"
+  },
+  {
+    "image": "shop7.jpg",
+    "name": "Cap",
+    "description": "",
+    "price": "Rs. 600"
+  },
+  {
+    "image": "shop8.jpg",
+    "name": "Baggy Pants",
+    "description": ".",
+    "price": "Rs. 2100"
+  },
+  {
+    "image": "shop9.jpg",
+    "name": "Classic Baggy Pants",
+    "description": "",
+    "price": "Rs. 2000"
+  },
+  {
+    "image": "shop10.jpg",
+    "name": "Baggy Trousers",
+    "description": "",
+    "price": "Rs. 1600"
+  }
+]

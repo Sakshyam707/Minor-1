@@ -1,0 +1,215 @@
+:root {
+    --white-color: #fff;
+    --dark-color: #252525;
+    --primary-color: grey;
+    --secondary-color: #f3961c;
+    --light-pink-color: #faf4f5;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--primary-color);
+    color: var(--dark-color);
+}
+
+/* Top hero image section for gallery page */
+.top-hero-image {
+    position: relative;
+    width: 100vw;
+    min-height: 60vh;
+    height: 60vh;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 0;
+    z-index: 2;
+}
+.h1-hero-img {
+    position: absolute;
+    top: -420px;
+    width: 101vw;
+    height: 131vh;
+    object-fit: scale-down;
+    margin: 0 auto;
+    filter: brightness(0.95);
+}
+.h1-overlay-text {
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 7vw;
+    font-family: 'Miniver', cursive;
+    text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    pointer-events: none;
+    width: 100vw;
+    max-width: 100vw;
+}
+@media (max-width: 700px) {
+    .top-hero-image {
+        min-height: 35vh;
+        height: 35vh;
+    }
+    .h1-hero-img {
+        width: 98vw;
+        height: 35vh;
+    }
+    .h1-overlay-text {
+        font-size: 12vw;
+    }
+}
+
+/* Add margin to main to prevent overlap with fixed header */
+main {
+    margin-top: 90px;
+}
+
+.primary-heading {
+    color: var(--secondary-color);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.gallery-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 60px 40px;
+    gap: 40px;
+    background: var(--primary-color);
+    z-index: 1;
+}
+
+.aside {
+    flex: 1;
+    min-width: 250px;
+    z-index: 2;
+}
+.aside-left {
+    order: 1;
+}
+.center-grid {
+    order: 2;
+}
+.aside-right {
+    order: 3;
+    /* Remove flex-end so both asides look identical */
+}
+
+.aside img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    background: var(--white-color);
+}
+
+.center-grid {
+    flex: 2;
+    min-width: 300px;
+    text-align: center;
+    z-index: 2;
+}
+
+.center-grid h2 {
+    color: var(--secondary-color);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    background: var(--white-color);
+}
+
+.slider-section {
+    margin-top: 60px;
+    padding: 40px;
+    background: var(--primary-color);
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.slider-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scrollbar-width: none;
+}
+
+.slider img {
+    flex: 0 0 auto;
+    height: 250px;
+    border-radius: 8px;
+    background: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.vision {
+    width: 100%;
+    padding: 80px 40px;
+    background: var(--light-pink-color);
+    text-align: center;
+    border-radius: 18px;
+    margin-top: 40px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.vision h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.vision p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--dark-color);
+}
+
+@media (max-width: 900px) {
+    .gallery-layout {
+        flex-direction: column;
+        gap: 24px;
+        padding: 36px 0;
+    }
+    .aside img {
+        height: 300px;
+    }
+    .slider img {
+        height: 150px;
+    }
+    .vision {
+        padding: 40px 10px;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Bhety</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+   <header>
+  <div class="navbar" id="navBar">
+    <a href="index.html" class="nav-logo">
+      <h2 class="logo-text"><img src="bhety1.png"></h2>
+    </a>
+    <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+    <div class="menu-items">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </div>
+  </div>
+</header>
+    <main>
+        <section class="shop-gallery-section">
+            <h1 class="shop-gallery-title">Shop </h1>
+            <div class="shop-gallery-grid">
+                <div class="shop-gallery-item">
+                    <img src="shop1.jpg" alt="Plain Tshirt">
+                    <a href="products_Description.html?id=1" class="show-more-btn">Show More</a>
+                </div>
+                <div class="shop-gallery-item">
+                    <img src="shop2.jpg" alt="Printed Tshirt">
+                    <a href="products_Description.html?id=2" class="show-more-btn">Show More</a>
+                </div>
+                <div class="shop-gallery-item">
+                    <img src="shop3.jpg" alt="Karma Edition">
+                    <a href="products_Description.html?id=3" class="show-more-btn">Show More</a>
+                </div>
+                <div class="shop-gallery-item">
+                    <img src="shop4.jpg" alt="Couple Edition">
+                    <a href="products_Description.html?id=4" class="show-more-btn">Show More</a>
+                </div>
+                <div class="shop-gallery-item">
+                    <img src="shop5.jpg" alt="Shirts">
+                    <a href="products_Description.html?id=5" class="show-more-btn">Show More</a>
+                </div>
+                <div class="shop-gallery-item">
+                    <img src="shop6.jpg" alt="Bhety Special">
+                    <a href="products_Description.html?id=6" class="show-more-btn">Show More</a>
+                </div>
+                <div class="shop-gallery-item">
+                    <img src="shop7.jpg" alt="Cap">
+                    <a href="products_Description.html?id=7" class="show-more-btn">Show More</a>
+                </div>
+                <div class="shop-gallery-item">
+                    <img src="shop8.jpg" alt="Baggy Pants">
+                    <a href="products_Description.html?id=8" class="show-more-btn">Show More</a>
+                </div>
+                <div class="shop-gallery-item">
+                    <img src="shop9.jpg" alt="Classic Baggy Pant">
+                    <a href="products_Description.html?id=9" class="show-more-btn">Show More</a>
+                </div>
+                <div class="shop-gallery-item">
+                    <img src="shop10.jpg" alt="Baggy Trouser">
+                    <a href="products_Description.html?id=10" class="show-more-btn">Show More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+  function toggleMenu() {
+    document.getElementById('navBar').classList.toggle('active');
+  }
+</script>
+</body>
+</html>

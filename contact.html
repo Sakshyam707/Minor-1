@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bhety</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar" id="navBar">
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text"><img src="bhety1.png"></h2>
+            </a>
+            <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+            <div class="menu-items">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </header>
+    <section class="contact-hero-main">
+        <div class="contact-hero-overlay"></div>
+        <div class="contact-hero-content">
+            <h1>Contact Us</h1>
+            <p>Due to high volumes of orders and interaction, it may take us time to respond. We are working diligently during this critical time and we appreciate your patience.</p>
+        </div>
+    </section>
+    <section class="contact-section">
+        <!-- Left container -->
+        <div class="contact-left">
+            <h2>We are here to help</h2>
+            <form>
+                <label for="name" class="field-label">Name</label>
+                <input type="text" id="name" name="name" class="field-input" required>
+                <label for="email" class="field-label">Email</label>
+                <input type="email" id="email" name="email" class="field-input" required>
+                <label for="message" class="field-label">Message</label>
+                <textarea id="message" name="message" class="field-input" rows="7" required></textarea>
+                <button type="submit" class="contact-submit">Submit</button>
+            </form>
+        </div>
+        <!-- Right container -->
+        <div class="contact-right">
+            <span class="info-label">Store:</span>
+            <span class="info-value">Thali-5, Kageshwori Manahara</span>
+            <span class="info-label">Email:</span>
+            <span class="info-value">bhety@gmail.com</span>
+            <span class="info-label">Call us:</span>
+            <span class="info-value">Phone: 9869666606<br>11:00am to 5:00pm</span>
+            <div class="social-media">
+                <span class="social-media-label">Social Media Handles:</span>
+                <a href="https://instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://youtube.com" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggleMenu() {
+            document.getElementById('navBar').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

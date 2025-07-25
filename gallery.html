@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Bhety</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:wght@400;500;600;700&display=swap">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+      <div class="navbar" id="navBar">
+        <a href="index.html" class="nav-logo">
+          <h2 class="logo-text"><img src="bhety1.png"></h2>
+        </a>
+        <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+        <div class="menu-items">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="cart.html">Cart</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="gallery-layout" style="margin-top: 80px;">
+      <div class="aside aside-left">
+        <img src="left-tall.jpg" alt="Left Aside">
+      </div>
+
+      <div class="center-grid">
+        <h2>Gallery Highlights</h2>
+        <div class="image-grid">
+          <img src="center1.jpg" alt="Gallery 1">
+          <img src="center2.jpg" alt="Gallery 2">
+          <img src="center3.jpg" alt="Gallery 3">
+          <img src="center4.jpg" alt="Gallery 4">
+          <img src="center5.jpg" alt="Gallery 5">
+          <img src="center6.jpg" alt="Gallery 6">
+        </div>
+      </div>
+
+      <div class="aside aside-right">
+        <img src="right-tall.jpg" alt="Right Aside">
+      </div>
+    </div>
+
+    <div class="slider-section">
+      <h2>More Visuals</h2>
+      <div class="slider" id="slider" style="max-width: 1200px; margin: 0 auto; display: flex; gap: 24px; overflow-x: auto;">
+        <img src="slide1.jpg" alt="Slide 1" style="width: 260px; height: 180px; border-radius: 16px; object-fit: cover;">
+        <img src="slide2.jpg" alt="Slide 2" style="width: 260px; height: 180px; border-radius: 16px; object-fit: cover;">
+        <img src="slide3.jpg" alt="Slide 3" style="width: 260px; height: 180px; border-radius: 16px; object-fit: cover;">
+        <img src="slide4.jpg" alt="Slide 4" style="width: 260px; height: 180px; border-radius: 16px; object-fit: cover;">
+        <img src="slide5.jpg" alt="Slide 5" style="width: 260px; height: 180px; border-radius: 16px; object-fit: cover;">
+        <img src="slide6.jpg" alt="Slide 6" style="width: 260px; height: 180px; border-radius: 16px; object-fit: cover;">
+        <img src="slide7.jpg" alt="Slide 7" style="width: 260px; height: 180px; border-radius: 16px; object-fit: cover;">
+      </div>
+    </div>
+
+    <div class="vision">
+      <h2>Our Vision Forward</h2>
+      <p>
+        We believe in the power of visual storytelling. Every image captures more than a moment—it reflects our commitment, our creativity, and our community. As we grow, we remain dedicated to curating experiences that resonate, inspire, and connect us all.
+      </p>
+    </div>
+
+    <script>
+    function toggleMenu() {
+      document.getElementById('navBar').classList.toggle('active');
+    }
+    // Cart login redirect logic
+    const cartLink = document.querySelector('.nav-link[href="cart.html"]');
+    if (cartLink) {
+      cartLink.addEventListener('click', function(e) {
+        if (!localStorage.getItem('isLoggedIn')) {
+          e.preventDefault();
+          localStorage.setItem('redirectAfterLogin', 'cart.html');
+          window.location.href = 'login.html';
+        }
+      });
+    }
+    </script>
+    <script src="gallery.js"></script>
+</body>
+</html>

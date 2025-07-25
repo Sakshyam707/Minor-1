@@ -1,0 +1,195 @@
+.shop-gallery-section {
+    padding: 60px 30px;
+    background: var(--light-pink-color);
+    min-height: 80vh;
+}
+
+.shop-gallery-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    font-family: 'Miniver', cursive;
+    margin-bottom: 40px;
+}
+
+.shop-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.shop-gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    background: var(--white-color);
+    transition: box-shadow 0.2s;
+}
+
+.shop-gallery-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+    transition: filter 0.2s;
+}
+
+.shop-gallery-item:hover {
+    box-shadow: 0 8px 32px rgba(243,150,28,0.12);
+}
+
+.shop-gallery-item:hover img {
+    filter: brightness(0.85);
+}
+
+.show-more-btn {
+    position: absolute;
+    left: 50%;
+    bottom: -60px;
+    transform: translateX(-50%);
+    background: var(--secondary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 24px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s, bottom 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.shop-gallery-item:hover .show-more-btn {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 50px;
+    z-index: 10;
+}
+
+.shop-gallery-item .show-more-btn:focus {
+    outline: 2px solid var(--secondary-color);
+}
+
+/* Modal styles */
+.shop-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-modal {
+    background: var(--white-color);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: row;
+    max-width: 700px;
+    width: 95vw;
+    min-height: 340px;
+    overflow: hidden;
+    position: relative;
+}
+
+.shop-modal-img {
+    flex: 1;
+    min-width: 220px;
+    max-width: 320px;
+    height: 100%;
+    object-fit: cover;
+    background: #eee;
+    border-right: 1px solid #f3f3f3;
+}
+
+.shop-modal-content {
+    flex: 2;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.shop-modal-title {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-family: 'Miniver', cursive;
+    margin-bottom: 18px;
+}
+
+.shop-modal-desc {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    margin-bottom: 28px;
+}
+
+.shop-modal-cart-btn {
+    background: var(--secondary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 24px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+}
+
+.shop-modal-cart-btn:hover {
+    background: #e08a00;
+}
+
+.shop-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    font-size: 1.7rem;
+    color: var(--dark-color);
+    cursor: pointer;
+    z-index: 2;
+}
+
+@media (max-width: 700px) {
+    .shop-modal {
+        flex-direction: column;
+        min-height: 0;
+    }
+    .shop-modal-img {
+        max-width: 100%;
+        min-width: 0;
+        height: 220px;
+        border-right: none;
+        border-bottom: 1px solid #f3f3f3;
+    }
+    .shop-modal-content {
+        padding: 18px 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    .shop-gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 18px;
+    }
+    .shop-gallery-item img {
+        height: 140px;
+    }
+    .show-more-btn {
+        padding: 8px 18px;
+        font-size: 0.95rem;
+    }
+}

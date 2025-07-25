@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: #fff6f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 48px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            display: flex;
+            gap: 32px;
+            padding: 32px;
+            align-items: flex-start;
+        }
+        .product-img {
+            width: 320px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            background: #eee;
+        }
+        .product-info {
+            flex: 1;
+        }
+        .product-title {
+            font-size: 2rem;
+            color: #f3961c;
+            font-family: 'Miniver', cursive, Arial, sans-serif;
+            margin-bottom: 18px;
+        }
+        .product-desc {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 24px;
+        }
+        .product-price {
+            font-size: 1.1rem;
+            color: #f3961c;
+            margin-bottom: 24px;
+        }
+        .buy-btn {
+            background: #f3961c;
+            color: #fff;
+            border: none;
+            border-radius: 24px;
+            padding: 12px 32px;
+            font-size: 1.1rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: background 0.2s;
+            display: inline-block;
+        }
+        .buy-btn:hover {
+            background: #e08a00;
+        }
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+                padding: 18px 8px;
+            }
+            .product-img {
+                width: 100%;
+                max-width: 320px;
+                margin-bottom: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="product-image" class="product-img" src="" alt="" style="display:none;">
+        <div class="product-info">
+            <h2 id="product-title" class="product-title"></h2>
+            <p id="product-description" class="product-desc"></p>
+            <div id="product-price" class="product-price"></div>
+            <a id="buy-button" class="buy-btn" href="#" style="display:none;">Buy Now </a>
+        </div>
+    </div>
+    <script>
+    // Get product id from query string
+    const url = new URLSearchParams(window.location.search);
+    const productId = url.get('id');
+    fetch('shop.json')
+      .then(response => response.json())
+      .then(products => {
+        // Find product by id (assume id is index+1 for demo, or add id field in shop.json)
+        let product;
+        if (productId) {
+          const idx = parseInt(productId, 10) - 1;
+          product = products[idx];
+        }
+        if (product) {
+          document.getElementById('product-title').textContent = product.name;
+          document.getElementById('product-description').textContent = product.description;
+          document.getElementById('product-price').textContent = "Price: " + product.price;
+          const image = document.getElementById('product-image');
+          image.src = product.image;
+          image.alt = product.name;
+          image.style.display = 'block';
+          const buyButton = document.getElementById('buy-button');
+          buyButton.href = "login.html?id=" + productId;
+          buyButton.style.display = 'inline-block';
+        } else {
+          document.getElementById('product-title').textContent = "Product Not Found";
+          document.getElementById('product-description').textContent = "Sorry, we couldn't find that product.";
+        }
+      })
+      .catch(error => {
+        console.error("Error loading product data:", error);
+        document.getElementById('product-title').textContent = "Error";
+        document.getElementById('product-description').textContent = "There was a problem loading the product.";
+      });
+    </script>
+</body>
+</html>

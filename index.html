@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhety</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <!-- h1.png hero image with overlay text -->
+    <section class="top-hero-image">
+        <img src="h1.png" alt="Bhety" class="h1-hero-img">
+        <div class="h1-overlay-text">This is Bhety</div>
+    </section>
+    <section class="template-sale-row">
+        <div class="template-sale-box">Sale</div>
+        <div class="template-sale-box">Sale</div>
+        <div class="template-sale-box">Sale</div>
+        <div class="template-sale-box">Upto</div>
+        <div class="template-sale-box">50% off</div>
+    </section>
+    <!-- header and navbar -->
+    <header>
+  <div class="navbar" id="navBar">
+    <a href="index.html" class="nav-logo">
+      <h2 class="logo-text"><img src="bhety1.png"></h2>
+    </a>
+    <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+    <div class="menu-items">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </div>
+  </div>
+</header>
+    <main>
+        <!-- hero section of web-->
+        <section class="hero-section">
+            <div class="section-content">
+                <div class="hero-details">
+                    <h2 class="title"> Best Apparel</h2>
+                    <h3 class="subtitle"> Spend your bhety only on bhety clothing</h3>
+                    <p class="description"> Redefining style with every stitch. Bold apparel for bold lives!</p>
+                    <div class="buttons">
+                        <a href="shop.html" class="button order-now"> Order Now</a>
+                        <a href="contact.html" class="button contact-us"> Contact Us</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="allthree.png" alt="Hero" class="hero-image">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section footer-left">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-center">
+          <h3 style="color:#fff;">Opening Hours</h3>
+          <p style="font-size:1.1rem;font-weight:600; color:#fff;">Mon-Fri: 10am - 6pm</p>
+          <p style="font-size:1.1rem;font-weight:600; color:#fff;">Sat-Sun: 11am - 4pm</p>
+        </div>
+        <div class="footer-section footer-right">
+          <h3 style="color:#fff;">Contact & Address</h3>
+          <p style="font-size:1.1rem;font-weight:600; color:#fff;">Email: <a href="mailto:info@bhety.com" style="color:#f3961c;text-decoration:underline;">info@bhety.com</a></p>
+          <p style="font-size:1.1rem;font-weight:600; color:#fff;">Phone: <a href="tel:+977123456789" style="color:#f3961c;text-decoration:underline;">+977-123456789</a></p>
+          <p style="font-size:1.1rem;font-weight:600; color:#fff;">Address: <span style="color:#f3961c;">Kathmandu, Nepal</span></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Bhety. All rights reserved.</p>
+      </div>
+    </footer>
+    <style>
+      /* Remove .footer-social-labels styles since only icons are used above */
+      .footer-hours {
+        margin-top: 12px;
+      }
+      .footer-bottom {
+        text-align: center;
+        padding: 12px 0;
+        background: #181818;
+        font-size: 1rem;
+        color: #bbb;
+      }
+      
+    </style>
+    
+    <style>
+      .footer {
+        background: #222;
+        color: #fff;
+        padding: 0 0 0 0;
+        margin-top: 0;
+        font-family: 'Poppins', Arial, sans-serif;
+      }
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px 12px 24px;
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+      .footer-section {
+        flex: 1;
+        min-width: 220px;
+      }
+      .footer-left, .footer-right, .footer-center {
+        margin-top: 32px;
+      }
+      .footer-left ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-left ul li {
+        margin-bottom: 8px;
+      }
+      .footer-left ul li a {
+        color: #f3961c;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .footer-left ul li a:hover {
+        color: #fff;
+      }
+      .footer-social a {
+        color: #f3961c;
+        margin: 0 10px;
+        font-size: 1.5rem;
+        transition: color 0.2s;
+      }
+      .footer-social a:hover {
+        color: #fff;
+      }
+      .footer-right p {
+        margin: 8px 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+      .footer-right a {
+        color: #fff;
+        text-decoration: underline;
+      }
+      /* Remove .footer-social-labels styles since only icons are used above */
+      .footer-hours {
+        margin-top: 12px;
+      }
+      .footer-bottom {
+        text-align: center;
+        padding: 12px 0;
+        background: #181818;
+        font-size: 1rem;
+        color: #bbb;
+      }
+      
+      
+    </style>
+    <script>
+  function toggleMenu() {
+    document.getElementById('navBar').classList.toggle('active');
+  }
+</script>
+  </body>
+</html>

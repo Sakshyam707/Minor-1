@@ -1,0 +1,90 @@
+<!-- ...existing code... -->
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Bhety</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar" id="navBar">
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text"><img src="bhety1.png"></h2>
+            </a>
+            <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+            <div class="menu-items">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </header>
+    <!-- About Us Section -->
+    <script>
+        function toggleMenu() {
+            document.getElementById('navBar').classList.toggle('active');
+        }
+    </script>
+    <section class="about-section">
+        <div class="about-img-box">
+            <img src="tshirt.jpg" alt="About Us">
+        </div>
+        <div class="about-text-box">
+            <h2>About Us</h2>
+            <p>We are a team of passionate individuals committed to innovation and excellence. Our work blends creativity with technology to create solutions that truly make an impact.</p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="about-section reverse">
+        <div class="about-img-box">
+            <img src="storeoutlet.jpg" alt="Our Story">
+        </div>
+        <div class="about-text-box">
+            <h2>Our Story</h2>
+            <p>Founded in the heart of Kathmandu, our journey began with a vision to empower communities through digital transformation. Our story is one of growth, grit, and genuine connection.</p>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="about-section">
+        <div class="about-img-box">
+            <img src="clothsmission.jpg" alt="Our Mission">
+        </div>
+        <div class="about-text-box">
+            <h2>Our Mission</h2>
+            <p>To deliver exceptional services, foster innovation, and drive meaningful change through every product we build. We believe in purpose-driven design that solves real-world problems.</p>
+        </div>
+    </section>
+
+    <!-- Our Impact Section -->
+    <section class="about-impact-section">
+        <h2>Our Impact</h2>
+        <div class="about-impact-grid">
+            <div class="about-impact-item">
+                <div class="about-impact-icon"><i class="fas fa-store"></i></div>
+                <h3>3 Outlets</h3>
+                <p>Expanding across Nepal with excellence and trust.</p>
+            </div>
+            <div class="about-impact-item">
+                <div class="about-impact-icon"><i class="fas fa-users"></i></div>
+                <h3>Over 5k Customers</h3>
+                <p>Trusted by a thriving community of satisfied users.</p>
+            </div>
+            <div class="about-impact-item">
+                <div class="about-impact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <h3>Based in Nepal</h3>
+                <p>Proudly rooted in the culture and innovation of Nepal.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
