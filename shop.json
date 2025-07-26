@@ -2,61 +2,62 @@
   {
     "image": "shop1.jpg",
     "name": "Plain Tshirt",
-    "description": ".",
+    "description": "Available sizes: S, M, L",
     "price": "Rs. 1200"
   },
   {
     "image": "shop2.jpg",
     "name": "Printed Tshirt",
-    "description": ".",
+    "description": "Available sizes: M, L",
     "price": "Rs. 1000"
   },
   {
     "image": "shop3.jpg",
     "name": "Karma edition",
-    "description": "",
+    "description": "Available sizes:L, XL", 
+    
     "price": "Rs. 1200"
   },
   {
     "image":"shop4.jpg",
     "name": "Couple edition",
-    "description": ".",
+    "description": "Available sizes: S, M, L, XL",
     "price": "Rs. 2000"
   },
   {
     "image": "shop5.jpg",
     "name": "Shirts",
-    "description": "",
+    "description": "Available sizes: M, L",
     "price": "Rs. 1650"
   },
   {
     "image": "shop6.jpg",
     "name": "Bhety Special",
-    "description": "",
+    "description": "Available sizes: S, M, L, XL",
     "price": "Rs. 1300"
   },
   {
     "image": "shop7.jpg",
     "name": "Cap",
-    "description": "",
+    "description": "Sizes are adjustable i.e one size fits all",
     "price": "Rs. 600"
   },
   {
     "image": "shop8.jpg",
     "name": "Baggy Pants",
-    "description": ".",
+    "description": "All are free size which means one size fits all",
     "price": "Rs. 2100"
   },
   {
     "image": "shop9.jpg",
     "name": "Classic Baggy Pants",
-    "description": "",
+    "description": "Available sizes:L, XL",
     "price": "Rs. 2000"
   },
   {
     "image": "shop10.jpg",
     "name": "Baggy Trousers",
-    "description": "",
+    "description": "All are free size which means one size fits all",
     "price": "Rs. 1600"
   }
 ]

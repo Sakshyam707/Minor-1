@@ -21,7 +21,7 @@
                 <a href="gallery.html">Gallery</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
-                <a href="cart.html">Cart</a>
+                <a href="cart.html">🛒</a>
             </div>
         </div>
     </header>
@@ -66,6 +66,30 @@
         function toggleMenu() {
             document.getElementById('navBar').classList.toggle('active');
         }
+
+        function validateForm(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill out all fields.');
+                return false;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            alert('Received Your Message Successfully!!');
+            return true;
+        }
+
+        document.querySelector('.contact-submit').addEventListener('click', validateForm);
     </script>
 </body>
 </html>

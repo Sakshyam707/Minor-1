@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'cart.html';
       } else {
         alert('Email or password is incorrect. Password must be at least 8 characters, include uppercase, lowercase, and a digit.');
+        // Stay on the login page without redirecting
       }
     });
   }
